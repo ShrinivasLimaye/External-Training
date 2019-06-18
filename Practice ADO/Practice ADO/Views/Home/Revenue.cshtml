@@ -1,0 +1,18 @@
+﻿
+<h2>Revenue</h2>
+<h3>SimpleChart</h3>
+
+@{
+    ViewBag.Title = "SimpleChart";
+}
+
+
+@{
+    var myChart = new Chart(width: 600, height: 400)
+        .AddTitle("Flowers Sale")
+        .AddSeries(
+            name: "Flowers",
+            xValue: new[] { "Gerbera", "Rose", "Lilly", "Marigold", "Lotus" },
+            yValues: new[] { "112", "56", "34", "75", "803" })
+        .Write();
+}

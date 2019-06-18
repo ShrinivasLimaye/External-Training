@@ -1,0 +1,64 @@
+﻿<style type="text/css">
+    .webgrid-table {
+        font-family: Arial,Helvetica,sans-serif;
+        font-size: 14px;
+        font-weight: normal;
+        width: 650px;
+        display: table;
+        border-collapse: collapse;
+        border: solid px #C5C5C5;
+        background-color: white;
+    }
+
+        .webgrid-table td, th {
+            border: 1px solid #C5C5C5;
+            padding: 3px 7px 2px;
+        }
+
+    .webgrid-header, .webgrid-header a {
+        background-color: #0094ff;
+        color: #ffffff;
+        text-align: left;
+        text-decoration: none;
+    }
+
+    .webgrid-footer {
+    }
+
+    .webgrid-row-style {
+        padding: 3px 7px 2px;
+    }
+
+    .webgrid-alternating-row {
+        background-color: azure;
+        padding: 3px 7px 2px;
+    }
+
+    .col1Width {
+        width: 55px;
+    }
+
+    .col2Width {
+        width: 220px;
+    }
+</style>
+@{
+    ViewBag.Title = "WebGrid Example";
+    var grid = new WebGrid(source: Model, canPage: true, rowsPerPage: 3);
+    grid.Pager(WebGridPagerModes.All);
+}
+<div id="gridContent" style="font-family: Arial; padding: 20px;">
+    @grid.GetHtml(tableStyle: "webgrid-table",
+                  headerStyle: "webgrid-header",
+                  footerStyle: "webgrid-footer",
+                  alternatingRowStyle: "webgrid-alternating-row",
+                  selectedRowStyle: "webgrid-selected-row",
+                  rowStyle: "webgrid-row-style",
+                  columns: grid.Columns(
+                           grid.Column(columnName: "FirstName", header: "First Name"),
+                           grid.Column(columnName: "LastName", header: "Last Name"),
+                           grid.Column(columnName: "Email", header: "Email Address"),
+                           grid.Column(columnName: "ContactNumber", header: "Mobile Number"),
+                           grid.Column(columnName: "City", header: "Location")
+    ))
+</div> 

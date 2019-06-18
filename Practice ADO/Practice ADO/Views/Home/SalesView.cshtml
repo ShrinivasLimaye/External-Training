@@ -1,0 +1,21 @@
+﻿<!--  Sales Dashboard -->
+
+@using BLL
+@model BLL.Sales.Repository
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Transflower Marketing Dashboard</h2>
+<p>
+    <h3>Customers</h3>
+    <div>
+        @Html.Partial("CustomerView", Model.customers)
+    </div>
+</p>
+<p>
+    <h3>Products</h3>
+    <div>
+        @Html.Partial("ProductView", Model.products)
+    </div>
+</p>

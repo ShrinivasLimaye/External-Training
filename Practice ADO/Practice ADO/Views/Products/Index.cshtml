@@ -1,0 +1,22 @@
+﻿@model IEnumerable<BOLayer.Product>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Products :</h2>
+<ol>
+    @foreach(BOLayer.Product prod in Model )
+    {
+        <hr />
+        <p><b> <a href="@Url.Action("Details", "Products",new { id = prod.ID })" class="links"> <img src="@Url.Content(prod.Image)" alt="Image" height="150px" width="100px" alt=prod.Title />
+</a></b></p>
+        <p><b>Product ID:</b> @prod.ID</p>
+        <p><b>Product Name:</b>@prod.Title</p>
+        <p><b>Description:</b> @prod.Description</p>
+
+        
+        
+    }
+</ol>
+

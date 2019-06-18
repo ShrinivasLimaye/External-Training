@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "AboutUs";
+}
+
+<h2>AboutUs</h2>
+
+<h3>Online Mentoring Company</h3>
+<p>Online workshops, DevCamps</p>
+<p>Mentor As A Service..</p>
+
+@{ string organization = ViewData["company"] as string;
+
+    <h2>@organization</h2>
+}
+<br />

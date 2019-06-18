@@ -1,0 +1,21 @@
+﻿@{ ViewBag.Title = "Index";}
+<h2>Index</h2>
+
+@using ECommerceWebSite.CustomHtmlHelpers
+
+@TFLHelper.Format("Welcome to Transflower")
+
+@Html.PunchLineFor("Simplified way of Learning.")
+
+
+@helper Greenhouse_div(string content)
+{<div style="background-color:gainsboro;height:100px;width:300px">
+        <mark>
+            <label style="font-size:large;font-family:Algerian">
+                @content
+            </label>
+        </mark>
+    </div>
+}
+
+@Greenhouse_div(@"Exploring your world!")

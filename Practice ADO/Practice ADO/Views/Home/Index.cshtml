@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "Index";
+    string fullName = "Ravi Tambade";
+}
+
+<h2>Index</h2>
+<a href="/Accounts/Login"> Sign In</a> | @Html.ActionLink("Register", "Register", "Employees") |  @Html.ActionLink("View All Emp", "emplist", "Employees")
+<h1>Transflower EStore</h1>
+<lable> Trainer: @fullName</lable>
+
+<a href="/home/aboutus"> About US</a> | <a href="home/contactus"> Contact US</a>
+<hr />
+
+@Html.ActionLink("Product Catalog", "Index", "Products")  |  @Html.ActionLink("Add Product", "Addc", "Products") 
+
+
+<hr/>
+
+@*<br/>
+@Html.ActionLink("Services", "Services") | @Html.ActionLink("Revenue", "Revenue") |@Html.ActionLink("Sales View", "SalesView")  |  @Html.ActionLink("TopTen", "TopTen") | @Html.ActionLink("Chart", "Chart")
+<br />
+@Html.ActionLink("Style", "TopTenStyle") | @Html.ActionLink("RowSelect", "TopTenStyleRowSelect") |@Html.ActionLink("Custom Helper", "CustomHelper") *@

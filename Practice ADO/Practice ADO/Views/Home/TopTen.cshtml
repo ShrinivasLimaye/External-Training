@@ -1,0 +1,27 @@
+﻿<h2>Transflower Top Ten</h2>
+
+@{
+    ViewBag.Title = "WebGrid";
+}
+
+@{
+    ViewBag.Title = "Best Performers";
+    // var grid = new WebGrid(source: Model);
+    //var grid = new WebGrid(source: Model, canSort: true);
+    //var grid = new WebGrid(source: Model, defaultSort: "LastName");
+    //var grid = new WebGrid(source: Model, columnNames: new[] { "FirstName", "LastName", "Email" });
+    var grid = new WebGrid(source: Model, rowsPerPage: 3);
+}
+@grid.GetHtml()
+
+@*@grid.GetHtml(columns: grid.Columns(
+    grid.Column(columnName: "FirstName", header: "First Name"),
+    grid.Column(columnName: "LastName", header: "Last Name"),
+    grid.Column(columnName: "Email", header: "Email Address"),
+    grid.Column(columnName: "ContactNumber", header: "Mobile Number"),
+    grid.Column(columnName: "City", header: "Location"),
+    grid.Column(header: "Edit", format: (item) =>
+    {
+        var link = Html.ActionLink("Edit", "Edit", new { id = item.ContactNumber });
+        return link;
+    })))*@

@@ -1,0 +1,15 @@
+D:\.Net Training\Practice ADO\DAL\bin\Debug\DAL.dll
+D:\.Net Training\Practice ADO\DAL\bin\Debug\DAL.pdb
+D:\.Net Training\Practice ADO\DAL\bin\Debug\AttributeRouting.dll
+D:\.Net Training\Practice ADO\DAL\bin\Debug\AttributeRouting.Web.dll
+D:\.Net Training\Practice ADO\DAL\bin\Debug\AttributeRouting.Web.Mvc.dll
+D:\.Net Training\Practice ADO\DAL\bin\Debug\BOLayer.dll
+D:\.Net Training\Practice ADO\DAL\bin\Debug\WebActivator.dll
+D:\.Net Training\Practice ADO\DAL\bin\Debug\BOLayer.pdb
+D:\.Net Training\Practice ADO\DAL\bin\Debug\AttributeRouting.xml
+D:\.Net Training\Practice ADO\DAL\bin\Debug\AttributeRouting.Web.xml
+D:\.Net Training\Practice ADO\DAL\bin\Debug\AttributeRouting.Web.Mvc.xml
+D:\.Net Training\Practice ADO\DAL\bin\Debug\WebActivator.pdb
+D:\.Net Training\Practice ADO\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+D:\.Net Training\Practice ADO\DAL\obj\Debug\DAL.dll
+D:\.Net Training\Practice ADO\DAL\obj\Debug\DAL.pdb

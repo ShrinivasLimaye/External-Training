@@ -1,0 +1,25 @@
+﻿@model BOLayer.Product
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Products :</h2>
+<ol>
+        <hr />
+        <p><b><img src="@Url.Content(Model.Image)" alt="Image" height="150px" width="100px" alt=prod.Title /></b></p>
+        <p><b>Product ID:</b> @Model.ID</p>
+        <p><b>Product Name:</b>@Model.Title</p>
+       <p><b>Description:</b> @Model.Description</p>
+        <p><b>Price per:</b> @Model.UnitPrice</p>
+        <p><b>Quantity:</b> @Model.Quantity</p>
+        
+        
+    
+</ol>
+
+
+        <td colspan="2">
+            @Html.ActionLink("Add To Cart", "AddToCart", "Shoppincart", new { name = Model.Title }, null)
+        </td>
+    </tr>
+</table>
