@@ -10,13 +10,23 @@ namespace BLL
 {
     public class OrderManager
     {
+        public static List<Product> Getorderd()
+        {
+            List<Product> orderd = new List<Product>();
+            orderd = OrderDAL.Getorderd();
+            return orderd;
+        }
         public static bool Insert(Product Prodfound)
         {
             bool status = false;
             status = OrderDAL.Add(Prodfound);
-            status = ProductDAL.Updatequant(Prodfound);
             return status;
-
+        }
+        public static bool Cancel(Product Prodfound)
+        {
+            bool status = false;
+            status = OrderDAL.Cancel(Prodfound);
+            return status;
         }
     }
 }

@@ -10,11 +10,19 @@ namespace ECommerceWebSite.Controllers
 {
     public class ShoppincartController : Controller
     {
+            [Authorize]
+
         //
         // GET: /Shoppincart/
         List<Product> productss = new List<Product>();
         List<Product> CART = new List<Product>();
+        public ActionResult View()
+        {
+           List<Product> CART = ProductManager.Getcart();
+            return View(CART);
 
+
+        }
         public ActionResult AddToCart(string name)
         {
             Product ProdFound = null;
@@ -64,7 +72,7 @@ namespace ECommerceWebSite.Controllers
             }
             else
             {
-                return View(CART);
+                return RedirectToAction("View", "Shoppincart");
 
             }
             }

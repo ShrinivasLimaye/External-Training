@@ -7,7 +7,7 @@ using BOLayer;
 
 namespace ECommerceWebSite.Controllers
 {
-
+    [Authorize]
     //handlling GET and POST request types
 
     public class HomeController : Controller

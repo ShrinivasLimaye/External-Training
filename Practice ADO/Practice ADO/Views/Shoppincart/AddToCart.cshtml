@@ -9,70 +9,29 @@
 <table width="100%">
     <tr>
         <td width="50%">
-            <p>
- <form method="post" action="@Url.Action("Order1", "Orders")" >
 
-   @using (Html.BeginForm())
-
-{
-                foreach (BOLayer.Product product in Model)
-                {
-                    @TotalRecords
-                                    <p><b>@product.Title</b></p>
-                    <p>Unit Price : @product.UnitPrice</p>
-                    <p>
-
-                        Quantity :<input type="text" name="firstName" id="firstName"/>
-                        @string res = firstName.value;
-                </select>
-                    </p>
-                    <p>
-                        @Html.ActionLink("Remove Item From Cart", "RemoveFromcart", "Shoppincart", new { name =@product.Title }, null)  |
-                        @Html.ActionLink("Order", "Order1", "Orders", new { name =@product.Title,quantiy}, null)  |
-
-                    </p>
-                }
-   }
-                @Html.ActionLink("Clear Cart", "dropcart", "Shoppincart") | 
-                @Html.ActionLink("Continue Shopping", "Index", "Products") |
+        @foreach (BOLayer.Product product in Model)
+        {
+           
+                <p><b>@product.Title</b></p>
+                <p>Unit Price : @product.UnitPrice</p>
+                <p>                     
+                 
+                Quantity :<input type="text" name="firstName" id="firstName"/>
+                </p>
+                <p>
+                
+                @Html.ActionLink("Remove Item From Cart", "RemoveFromcart", "Shoppincart", new { name =@product.Title }, null)  |
+                @Html.ActionLink("Orders", "Order1", "Orders", new { name =@product.Title }, null)  |
 
                 </p>
-            </td>
-            <td>
-                @*@int TotalItem = 0;*@
-                <p><b>Billing Calculation</b>&nbsp;&nbsp;&nbsp;
-                <p>
-                    <table cellspacing="10">
-                        <tr>
-                            <th>Item Name</th>
-                            <th> Price</th>
-                        </tr>
-                        
-                        @foreach (BOLayer.Product product in Model)
-                        {
-                             <tr>
-                            <td>
-                <p><b>@product.Title</b></p>
-            </td>
-            <td>                    <p> @product.UnitPrice</p></td>
-        </tr>
-
-            }
-    <tr>
-        <td>
-            Total : 
-        </td>
-        <td>
-            <b> 
-
-  </b>
-        </td>
-    </tr>
+         }
+    
+                @Html.ActionLink("Clear Cart", "dropcart", "Shoppincart") | 
+                @Html.ActionLink("Continue Shopping", "Index", "Products") |
+     
+ </td>
+   </tr>
     </table>
-                    </p>
-                    </td>
-                    </tr>
-                    </table>
-
-                       
+                  
    

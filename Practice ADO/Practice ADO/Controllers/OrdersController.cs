@@ -11,8 +11,14 @@ namespace ECommerceWebSite.Controllers
     {
         //
         // GET: /Orders/
-        [HttpPost]
-        public ActionResult Order1()
+        public ActionResult Show()
+        {
+            List<Product> orderd = OrderManager.Getorderd();
+            return View(orderd);
+
+
+        }
+        public ActionResult Order1(string name)
         {
             Product ProdFound = null;
             List<Product> products = ProductManager.GetAllProduct();
@@ -23,15 +29,10 @@ namespace ECommerceWebSite.Controllers
                     ProdFound = prod;
                 }
             }
-            ProdFound.Quantity = ProdFound.Quantity-q
             if (OrderManager.Insert(ProdFound))
             {
-
-                if (ProductManager.Updatequant(ProdFound))
-                {
-                List<Product> CART = ProductManager.Getcart();
-                return View(CART);
-                }
+                List<Product> orderd = OrderManager.Getorderd();
+                return View(orderd); 
             }
             else
             {
@@ -39,6 +40,38 @@ namespace ECommerceWebSite.Controllers
             }
             return RedirectToAction("Index", "Home");
         }
+        public ActionResult Cancel(string name)
+        {
+            int name1 = Convert.ToInt32(name);
+            Product ProdFound = null;
+            List<Product> products = ProductManager.GetAllProduct();
+            foreach (Product prod in products)
+            {
+                if (prod.ID == name1)
+                {
+                    ProdFound = prod;
+                }
+            }
+            if (OrderManager.Cancel(ProdFound))
+            {
+                Response.Write("Success");
+            }
+            else
+            {
+                Response.Write("failure");
+            }
+            List<Product> orderd = OrderManager.Getorderd();
+            if (orderd.Count == 0)
+            {
+                return RedirectToAction("Index", "Products");
+            }
+            else
+            {
+                return RedirectToAction("Show", "Orders");
+
+            }
+            }
+        
 
         }
 	}

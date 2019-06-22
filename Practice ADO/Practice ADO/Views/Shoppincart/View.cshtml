@@ -1,0 +1,37 @@
+﻿@model IEnumerable<BOLayer.Product>
+@{
+    ViewBag.Title = "AddToCard";
+    int TotalRecords = 0;
+
+}
+
+<h2>Card Item</h2>
+<table width="100%">
+    <tr>
+        <td width="50%">
+
+        @foreach (BOLayer.Product product in Model)
+        {
+           
+                <p><b>@product.Title</b></p>
+                <p>Unit Price : @product.UnitPrice</p>
+                <p>                     
+                 
+                Quantity :<input type="text" name="firstName" id="firstName"/>
+                </p>
+                <p>
+                
+                @Html.ActionLink("Remove Item From Cart", "RemoveFromcart", "Shoppincart", new { name =@product.Title }, null)  |
+                @Html.ActionLink("Order", "Order1", "Orders", new { name =@product.Title }, null)  |
+
+                </p>
+         }
+    
+                @Html.ActionLink("Clear Cart", "dropcart", "Shoppincart") | 
+                @Html.ActionLink("Continue Shopping", "Index", "Products") |
+     
+ </td>
+   </tr>
+    </table>
+                  
+   

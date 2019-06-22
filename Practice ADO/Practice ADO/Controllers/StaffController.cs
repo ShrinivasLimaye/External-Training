@@ -7,6 +7,8 @@ using BOLayer;
 
 namespace ECommerceWebSite.Controllers
 {
+    [Authorize]
+
     public class StaffController : Controller
     {
 

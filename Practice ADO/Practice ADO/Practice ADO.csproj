@@ -319,9 +319,6 @@
     <Content Include="Views\Shoppincart\AddToCart.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shoppincart\RemoveFromCart.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Views\Employees\Register.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -335,6 +332,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Orders\Order1.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shoppincart\RemoveFromCart.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shoppincart\View.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Orders\Cancel.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Orders\Show.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

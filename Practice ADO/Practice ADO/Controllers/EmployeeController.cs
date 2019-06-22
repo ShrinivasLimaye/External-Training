@@ -9,6 +9,8 @@ using DAL;
 
 namespace ECommerceWebSite.Controllers
 {
+   [Authorize]
+
     public class EmployeesController : Controller
     {
         List<Employee> employees = new List<Employee>();
